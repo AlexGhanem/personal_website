@@ -1,0 +1,42 @@
+#greet_cont
+{
+    min-height: 500px;
+}
+
+.col-auto
+{
+    position: absolute;
+    top: 50%;
+}
+
+.navbar-brand
+{
+    font-weight: bold;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: inherit;
+    min-height: inherit;
+    z-index: -1;
+    filter: blur(2px);
+    transform: scale(1.04);
+    -o-filter: blur(2px);
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+
+  }
+#greet{
+    color:ghostwhite;
+}
+
+.git-icon{
+    background-image : url("https://image.flaticon.com/icons/png/512/25/25231.png");
+    background-size: cover;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+  }

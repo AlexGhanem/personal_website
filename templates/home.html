@@ -1,0 +1,25 @@
+{%extends 'index.html'%}
+
+{%block head%}
+<title>Home</title>
+{%endblock%}
+
+{%block body%}
+<div class="alert alert-warning" role="alert">
+    This website is under development
+</div>
+<div id = video>
+    <video autoplay muted loop id="myVideo">
+    <source src="{{url_for('static', filename='/assets/video.mp4')}}" type="video/mp4">
+    </video>
+</div>
+
+<div class="container" id="greet_cont">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h1 id = "greet">{{ greeting }}</h1>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
