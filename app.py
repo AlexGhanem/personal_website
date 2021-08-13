@@ -24,7 +24,7 @@ proj = [
         'description' : 'My first fully coded and fully loaded portfolio website built from scratch using the Flask framework, HTML and CSS (with a dash of Bootstrap).',
         'link' : "/",
         'title' : 'Personal Website',
-        'github':''
+        'github':'https://github.com/AlexGhanem/personal_website'
     },
      {
         'image': "https://firms.modaps.eosdis.nasa.gov/images/lance_logo.png",
