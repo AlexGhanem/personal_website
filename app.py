@@ -7,38 +7,6 @@ app = Flask(__name__)
 cursor.execute('SELECT * FROM PROJECTS')
 results = cursor.fetchall()
 
-proj = [
-    {
-        'image': "https://upload.wikimedia.org/wikipedia/commons/3/31/Seal_of_the_Metropolitan_Police_Department_of_the_District_of_Columbia.svg",
-        'description' : 'My first interactive dashboard. Metropolitan Police Department Data Dashboard showcasing arrest and stop public data.',
-        'link' : "https://mpd-dash-app.herokuapp.com/",
-        'title' : 'MPD Data Dashboard',
-        'small_text':'long load time',
-        'github':'https://github.com/AlexGhanem/MPD_analysis'
-    },
-    {
-        'image': "https://www.svgrepo.com/show/261900/presentation-financial.svg",
-        'description' : 'A dashboard that summarizes financial data from multiple APIs for any given S&P 500 company. More features coming soon.',
-        'link' : "https://financials-dash.herokuapp.com/",
-        'title' : 'Financial Dashboard',
-        'github':'https://github.com/AlexGhanem/financial_dash',
-    },
-    {
-        'image': "https://pic.onlinewebfonts.com/svg/img_463275.png",
-        'description' : 'My first fully coded and fully loaded portfolio website built from scratch using the Flask framework, HTML and CSS (with a dash of Bootstrap).',
-        'link' : "/",
-        'title' : 'Personal Website',
-        'github':'https://github.com/AlexGhanem/personal_website'
-    },
-     {
-        'image': "https://firms.modaps.eosdis.nasa.gov/images/lance_logo.png",
-        'description' : "First project using Google Studio's seamless integration with BigQuery. The data consists of 13million+ fire incidents from 2018 to 2020 which made BigQuery the ideal home for such a large dataset.",
-        'link' : "/fires",
-        'title' : "NASA FIRMS fire data dashboard",
-        'github':''
-    },
-]
-
 
 @app.route('/', methods=['GET', 'POST']) 
 def home():
