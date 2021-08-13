@@ -40,3 +40,12 @@
     height: 20px;
     width: 20px;
   }
+
+.proj{
+    height: 300px;
+    overflow-y: auto;
+  }
+.desc{
+    height:200px;
+    overflow-y: auto;
+}

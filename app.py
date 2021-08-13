@@ -1,7 +1,11 @@
 from flask import Flask, render_template, redirect
-
+from datetime import datetime
+from connection import cursor
 # Configure application
 app = Flask(__name__)
+
+cursor.execute('SELECT * FROM PROJECTS')
+results = cursor.fetchall()
 
 proj = [
     {
@@ -44,7 +48,7 @@ def home():
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html', projects=proj)
+    return render_template('projects.html', projects=results)
 
 @app.route('/timeline')
 def timeline():
