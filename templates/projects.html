@@ -4,7 +4,7 @@
 
 {%block body%}
 <div class="container">
-    <section class="py-5 text-center container">
+    <section class="py-2 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
                 <h1 class="fw-light">Projects Collection</h1>
@@ -17,38 +17,108 @@
         </div>
     </section>
 
-    <div class="album py-5 bg-secondary">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            {% for project in projects %}
-            <div class="col">
-                <div class="card shadow-sm">
-                    <div class="card-header">
-                        <p>{{project.title}}</p>
-                    </div>
-                    <img class='card-img-top' src={{project.img}} alt='photo' id="thumbnail">
-                    <div class="card-body proj">
-                        <p class="card-text desc">{{project.description}}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-primary view"
-                                    onclick="window.open('{{project.link}}','_blank')">View
-                                    Project</button>
-                                {%if project.github != none%}
-                                <button type="button" class="btn btn-secondary"
-                                    onclick="window.open('{{project.github}}','_blank')">
-                                    <i class="git-icon"></i>
-                                </button>
-                                {%endif%}
+    <div class="row mx-auto my-auto justify-content-center">
+        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval='3000'>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="col-md-3">
+                        <div class="card shadow-sm proj">
+                            <div class="img__description">
+                                <div class = 'desc_cont'>
+                                    <p class = 'desc'>
+                                        <h4>{{projects[0].title}}</h4>
+                                        <br>
+                                        <p class='caption'>{{projects[0].description}}</p>
+                                    </p>
+                                </div>
+                                <div class="justify-content-between align-items-center btns">
+                                    <div class="btn-group mb-2 ms-2 bottom-0 start-0 position-absolute">
+                                        <button type="button" class="btn alight-self-end btn-primary view"
+                                            onclick="window.open('{{projects[0].link}}','_blank')">View
+                                            Project
+                                        </button>
+                                        {%if projects[0].github != none%}
+                                        <button type="button" class="btn btn-secondary"
+                                            onclick="window.open('{{projects[0].github}}','_blank')">
+                                            <i class="git-icon"></i>
+                                        </button>
+                                        {%endif%}
+                                    </div>
+                                    {%if projects[0].small_text != none%}
+                                    <small class="text-muted">{{projects[0]['small_text']}}</small>
+                                    {%endif%}
+                                </div>
                             </div>
-                            {%if project.small_text != none%}
-                                <small class="text-muted">{{project['small_text']}}</small>
-                            {%endif%}
+                            <div class='card-img'>
+                                <img class='img-top img-fluid' src={{projects[0].img}} alt='photo' id="thumbnail">
+                            </div>
                         </div>
                     </div>
                 </div>
+                {%for project in projects[1:]%}
+                <div class="carousel-item">
+                    <div class="col-md-3">
+                        <div class="card shadow-sm proj">
+                            <div class="img__description">
+                                <div class = "desc_cont">
+                                    <p class='desc'>
+                                        <h4 class='proj_title'>{{project.title}}</h4>
+                                        <p class='caption'>{{project.description}}</p>
+                                    </p>
+                                </div>
+                                <div class="justify-content-between align-items-center btns">
+                                    <div class="btn-group mb-2 ms-2 bottom-0 start-0 position-absolute">
+                                        <button type="button" class="btn alight-self-end btn-primary view"
+                                            onclick="window.open('{{project.link}}','_blank')">View
+                                            Project
+                                        </button>
+                                        {%if projects[0].github != none%}
+                                        <button type="button" class="btn btn-secondary"
+                                            onclick="window.open('{{project.github}}','_blank')">
+                                            <i class="git-icon"></i>
+                                        </button>
+                                        {%endif%}
+                                    </div>
+                                    {%if projects[0].small_text != none%}
+                                    <small class="text-muted">{{project['small_text']}}</small>
+                                    {%endif%}
+                                </div>
+                            </div>
+                            <div class='card-img'>
+                                <img class='img-top img-fluid' src={{project.img}} alt='photo' id="thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
             </div>
-            {%endfor%}
+            <a class="carousel-control-prev carousel-control bg-transparent w-aut" href="#recipeCarousel" role="button"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next carousel-control bg-transparent w-aut" href="#recipeCarousel" role="button"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
         </div>
     </div>
+    <br>
 </div>
+<script>
+    let items = document.querySelectorAll('.carousel .carousel-item')
+
+    items.forEach((el) => {
+        const minPerSlide = 4
+        let next = el.nextElementSibling
+        for (var i = 1; i < minPerSlide; i++) {
+            if (!next) {
+                next = items[0]
+            }
+            let cloneChild = next.cloneNode(true)
+            el.appendChild(cloneChild.children[0])
+            next = next.nextElementSibling
+        }
+    })
+
+</script>
 {%endblock%}
