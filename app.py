@@ -10,7 +10,7 @@ results = cursor.fetchall()
 
 @app.route('/', methods=['GET', 'POST']) 
 def home():
-    greeting = "Welcome to Alex's Portoflio"
+    greeting = "Welcome to Alex's Portfolio"
     return render_template('home.html', greeting=greeting, projects=results)
 
 
