@@ -9,28 +9,41 @@
     top: 50%;
 }
 
+.align-self-end{
+    position: inherit;
+    top:0;
+}
 .navbar-brand
 {
     font-weight: bold;
 }
-
+#video{
+    text-align: center;
+    line-height: 100%;
+    width: auto;
+    height: 100vh;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
 #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: inherit;
+    position: relative;
+    min-width: inherit; 
     min-height: inherit;
-    z-index: -1;
     filter: blur(2px);
     transform: scale(1.04);
     -o-filter: blur(2px);
     object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-
+    Z-index:-1;
+    margin-left: -220px;
 }
 #greet{
     color:ghostwhite;
+}
+
+.home_cont{
+    padding-top: 5em;
 }
 
 .git-icon{
@@ -179,3 +192,45 @@
   transform: translateX(0);
 }
 
+a{color:inherit}
+
+footer {
+    background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
+    /* font-family: 'Rubik', sans-serif; */
+    background: #455A64;
+    /* height: 100 !important */
+}
+
+#foot_cont{
+    overflow: hidden;
+    margin-top: px;
+    background: #262626;
+    color: #627482 !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top:10%;
+}
+
+small {
+    font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.bold-text {
+    color: #989c9e !important
+}
+
+.mt-55 {
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+#foot_name {
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.social {
+    font-size: 21px !important
+}
+
+.rights {
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
+}

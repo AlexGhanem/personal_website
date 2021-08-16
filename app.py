@@ -11,7 +11,7 @@ results = cursor.fetchall()
 @app.route('/', methods=['GET', 'POST']) 
 def home():
     greeting = "Welcome to Alex's Portoflio"
-    return render_template('home.html', greeting=greeting)
+    return render_template('home.html', greeting=greeting, projects=results)
 
 
 @app.route('/projects')
@@ -25,6 +25,10 @@ def timeline():
 @app.route('/fires')
 def fires_page():
     return render_template('fires.html')
+
+@app.route('/contact')
+def contact_page():
+    return render_template('contact.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
