@@ -2,7 +2,12 @@
 {
     min-height: 500px;
 }
-
+.alert{
+    margin-bottom: 0;
+    z-index: 10;
+    position: absolute;
+    right:0;
+}
 .col-auto
 {
     position: absolute;
