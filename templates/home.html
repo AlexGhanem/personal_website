@@ -5,6 +5,29 @@
 {%endblock%}
 
 {%block body%}
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Alex's World</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#video">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tools">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="alert alert-warning alert-dismissable" role="alert">
     This website is under development
 </div>
@@ -20,10 +43,35 @@
         </video>
     </div>
     <div class='container home_cont'>
+        
+        <section class="py-2 text-center container mb-5" id='tools' style="max-width:100%">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">My Toolkit</h1>
+                </div>
+            </div>
+            <div class="row" style="max-width:100%">
+                <div class="mt-1">
+                    <p class="tools text-muted mb-0 pb-0 bold-text align-items">
+                        <span class="mx-2"><img style="height: auto; width: 10%" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"></span>
+                        <span class="mx-2"><img style="height: auto; width: 30%;" src="https://rapids.ai/assets/images/Plotly_Dash_logo.png"></span>
+                        <span class="mx-2"><img style="height: auto; width: 10%" src="https://symbols.getvecta.com/stencil_75/69_bigquery-icon.eb9185e8d2.svg"></span>
+                        <span class="mx-2"><img style="height: auto; width: 10%;" src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"></span>
+                        <span class="mx-2"><img style="height: auto; width: 15%" src="https://png2.cleanpng.com/sh/0345b6c1c2e1e3c8b07261dc5a9f969f/L0KzQYm3VcI3N6h8R91yc4Pzfri0jflkepD4h9h9LYP0fH76hgJ3baMyhet8cXywdLL7gfJie5YyhNHwbz24coGCWPM3bZYAStM9Nj6zRImBVsgyOGI6Sqk8NUK3Q4GCVcUyNqFzf3==/kisspng-microsoft-sql-server-mysql-database-logo-5b098c6ee92a46.0488681015273524309551.png"></span>
+                        <span class="mx-2"><img style="height: auto; width: 15%" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg"></span>
+                        <span class="mx-2"><img style="height: auto; width: 10%" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"></span>
+                        <span class="mx-2"><img style="height: auto; width: 7%" src="https://brand.heroku.com/static/media/heroku-logotype-vertical.f7e1193f.svg"></span>
+                        <span class="mx-2"><img style="height: auto; width: 10%" src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"></span>
+                        <span class="mx-2"><img style="height: auto; width: 20%" src="https://cdn.freelogovectors.net/wp-content/uploads/2019/07/stata-logo.jpg"></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
         <section class="py-2 text-center container" id='projects'>
             <div class="row py-lg-5">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">Projects Collection</h1>
+                    <h1 class="fw-light mb-5">Projects Collection</h1>
                     <p class="lead text-muted">
                         A growing collection of my coding projects. Hover for details!
                         <br>
@@ -124,49 +172,6 @@
             </div>
         </div>
     </div>
-    <footer class="footer mt-auto bg-light">
-        <div id="foot_cont" class="container-fluid pb-0 mb-0 justify-content-center text-light ">
-            <div class="row my-5 justify-content-center py-5">
-                <div class="col-11">
-                    <div class="row ">
-                        <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
-                            <h3 id='foot_name' class="text-muted mb-md-0 mb-5 bold-text">Alex's World.</h3>
-                        </div>
-                        <div class="col-xl-2 col-md-4 col-sm-4 col-12">
-                            <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
-                            <ul class="list-unstyled">
-                                <li><a href=#video>Home</a></li>
-                                <li><a href='#projects'> Projects</a></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </div>
-                        <div class="col-xl-2 col-md-4 col-sm-4 col-12">
-                            <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
-                            <p class="mb-1">Washginton, D.C.</p>
-                            <p>20011</p>
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
-                            <p class="social text-muted mb-0 pb-0 bold-text">
-                                <!-- <span class="mx-2"><i class="fab fa-facebook" aria-hidden="true"></i></span>
-                                <span class="mx-2"><i class="fab fa-linkedin" aria-hidden="true"></i></span>
-                                <span class="mx-2"><i class="fab fa-twitter" aria-hidden="true"></i></span>
-                                <span class="mx-2"><i class="fab fa-instagram" aria-hidden="true"></i></span> -->
-                            </p>
-                            <small class="rights"><span>&#174;</span> MIT Licence, 2021</small>
-                        </div>
-                        <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
-                            <h6 class="mt-55 mt-2 text-muted bold-text"><b>Alex Ben Ghanem</b></h6><small> <span><i
-                                        class="fas fa-envelope" aria-hidden="true"></i></span>
-                                alexbghanem@gmail.com</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 </div>
 
 
