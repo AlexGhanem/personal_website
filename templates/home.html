@@ -25,7 +25,7 @@
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">Projects Collection</h1>
                     <p class="lead text-muted">
-                        A growing collection of my coding projects.
+                        A growing collection of my coding projects. Hover for details!
                         <br>
                         Some of the projects take some time to load.
                     </p>
@@ -93,14 +93,14 @@
                                                 onclick="window.open('{{project.link}}','_blank')">View
                                                 Project
                                             </button>
-                                            {%if projects[0].github != none%}
+                                            {%if project.github != none%}
                                             <button type="button" class="btn btn-secondary"
                                                 onclick="window.open('{{project.github}}','_blank')">
                                                 <i class="git-icon"></i>
                                             </button>
                                             {%endif%}
                                         </div>
-                                        {%if projects[0].small_text != none%}
+                                        {%if project.small_text != none%}
                                         <small class="text-muted">{{project['small_text']}}</small>
                                         {%endif%}
                                     </div>
